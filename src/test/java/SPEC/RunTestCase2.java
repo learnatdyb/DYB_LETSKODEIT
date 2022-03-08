@@ -15,28 +15,21 @@ import org.testng.annotations.Test;
 
 import Generic.GenericFunction;
 import PageDefenition.HomePage;
+import PageDefenition.HomePage2;
 
 
-public class RunTestCase{
+public class RunTestCase2{
 	GenericFunction gf = new GenericFunction();
-	WebDriver driver;
+	public WebDriver driver;
 	@SuppressWarnings("deprecation")
 	
 	@Test
 	public void verify_application_launched() throws IOException
 	{
-		String projectpath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectpath+"\\chromedriver.exe");
 		
-		ChromeOptions options = new ChromeOptions();
-		  //Setting Binary Path of Brave Browser in options object.
-	    options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
-	    options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
-	   
-	    //Initializing Chrome Browser Instance
-	    driver = new ChromeDriver(options);
-		HomePage home = new HomePage(driver);
-	  //Maximizing Browser	
+		HomePage2 home = new HomePage2();
+	  //Maximizing Browser
+		driver = home.set_browserinstance();
 	    driver.manage().window().maximize();
 		Properties prop = gf.loadpropertiesfile();	
 		home.open_letskode();

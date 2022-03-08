@@ -4,25 +4,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import SPEC.Base;
+import SPEC.RunTestCase;
+
 public class HomePage {
-	
+	public  WebDriver driver;
+	public HomePage(WebDriver driver)
+	{
+		this.driver = driver;
+	}
 	public String open_letskode()
 	{
 		System.out.println(System.getProperty("user.dir"));
-		String projectpath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectpath+"\\chromedriver.exe");
 		
-		ChromeOptions options = new ChromeOptions();
-		  //Setting Binary Path of Brave Browser in options object.
-	    options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
-	   options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
 	   
-	    //Initializing Chrome Browser Instance
-	    WebDriver driver = new ChromeDriver(options);
-	    
-	  //Maximizing Browser	
-	    driver.manage().window().maximize();
-	 
 	    //Launching https://abodeqa.com
 	    driver.get("https://letskodeit.teachable.com/");
 	   
