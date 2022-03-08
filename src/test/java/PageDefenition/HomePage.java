@@ -8,7 +8,10 @@ public class HomePage {
 	
 	public String open_letskode()
 	{
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium_JAVA_Projects\\letsKODEit\\chromedriver.exe");
+		System.out.println(System.getProperty("user.dir"));
+		String projectpath = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", projectpath+"\\chromedriver.exe");
+		
 		ChromeOptions options = new ChromeOptions();
 		  //Setting Binary Path of Brave Browser in options object.
 	    options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
