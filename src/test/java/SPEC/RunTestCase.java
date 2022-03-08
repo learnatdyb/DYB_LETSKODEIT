@@ -28,7 +28,11 @@ public class RunTestCase {
 		Assert.assertEquals(prop.getProperty("expectedTitle"), home.open_letskode());
 	}
 
-	
+	@Test
+	public void sample_failedTC()
+	{
+		Assert.assertTrue(false);
+	}
 
 
 }
