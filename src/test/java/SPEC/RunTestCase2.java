@@ -24,9 +24,9 @@ public class RunTestCase2{
 	@SuppressWarnings("deprecation")
 	
 	@Test
-	public void verify_application_launched() throws IOException
+	public void verify_application_launched2() throws IOException
 	{
-		
+		System.out.println("Running Suite2");
 		HomePage2 home = new HomePage2();
 	  //Maximizing Browser
 		driver = home.set_browserinstance();
@@ -37,7 +37,7 @@ public class RunTestCase2{
 	}
 
 	@Test
-	public void sample_failedTC()
+	public void sample_failedTC2()
 	{
 		Assert.assertTrue(true);
 	}

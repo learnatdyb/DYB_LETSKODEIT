@@ -25,6 +25,7 @@ public class RunTestCase{
 	@Test
 	public void verify_application_launched() throws IOException
 	{
+		System.out.println("Running Suite1");
 		String projectpath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", projectpath+"\\chromedriver.exe");
 		
